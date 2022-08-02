@@ -1,0 +1,51 @@
+@mixin flexCenter($applied) {
+    display: flex;
+    justify-content: $applied;
+    align-items: center;
+}
+
+header {
+    height: 120px;
+
+    @include flexCenter(space-between);
+
+
+    .nav-list,
+    .item-list {
+        @include flexCenter(space-between);
+        list-style-type: none;
+    }
+
+    .list__item {
+        margin: 0 25px;
+    }
+
+    .nav__link {
+        text-transform: capitalize;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 31px;
+        color: #222222;
+    }
+
+    .list__item__link,
+    .nav__signin,
+    .nav__signup {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 155%;
+        color: #222222;
+    }
+
+    .nav__signup {
+        margin-left: 48px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        padding: 12px 24px;
+        background: #086CF9;
+        border-radius: 4px;
+        color: #FFFFFF;
+    }
+}
